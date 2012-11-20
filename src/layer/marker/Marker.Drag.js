@@ -43,8 +43,8 @@ L.Handler.MarkerDrag = L.Handler.extend({
 		if (shadow) {
 			L.DomUtil.setPosition(shadow, iconPos);
 		}
-
-		marker._latlng = latlng;
+		marker._latlng.lat = latlng.lat;
+		marker._latlng.lng = latlng.lng;
 
 		marker
 		    .fire('move', {latlng: latlng})
